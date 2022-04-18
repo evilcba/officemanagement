@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="holiday.css">
+    <link rel="stylesheet" href="login2.css">
+    <link rel="stylesheet" href="leave.css">
+</head>
+
+<body>
+
+<!-- nav bar starts -->
+    <nav>
+
+        <label class="logo">Office MS</label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul id="sidebar" class="side" style="padding-left: 0px;">
+            <div class="header">
+                <img src="/profile.webp" class="image">
+                <p class="cba">Shibaa Adhikari </p>
+                <a href="#" class="online on"><i class="fa fa-circle text-success"></i> Online</a>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="desc" name="desc" placeholder="comment if any">
+                    <span class="input-group-btn">
+                        <button type="submit" id="action_btn" class="btn btn-warning">Punch Out</button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 
+            <li><a class="active" href="login1.html">Salary</a></li>
+            <li><a href="leave.html">Leave</a></li>
+            <li><a href="holiday.html">Holiday</a></li>
+            <li><a href="signin.html">Login</a></li> -->
+            <div class="sub-header">
+                <li class="header">NAVIGATION</li>
+                <!-- <li  class="fa fa-money"class="bi bi-cash" ><a  href="login1.html">Salary</a></li><br> -->
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-money"></i> <span>Salary Slips</span>
+                    </a>
+                </li>
+                <!-- <li class="fa fa-sign-out"><a href="leave.html">Leave</a></li> -->
+                <li class="active">
+                    <a href="leave.html">
+                        <i class="fa fa-sign-out"></i> <span>Leaves</span>
+                    </a>
+                </li>
+                <!-- <li class="fa fa-calendar-check-o" ><a href="holiday.html">Holiday </a></li> -->
+                <li class="">
+                    <a href="holiday.html">
+                        <i class="fa fa-calendar-check-o"></i> <span>Holidays</span>
+                    </a>
+                </li>
+                <!-- <li class="fa fa-sign-in"><a href="signin.html">login</a></li> -->
+                <!-- <li class="">
+            <a href="signin.html">
+            <i class="fa fa-sign-in"></i> <span>Login</span>
+            </a>
+            </li> -->
+            </div>
+
+        </ul>
+    </nav>
+    <!-- nav bar ends -->
+
+    
+    <!-- starts the leaves  -->
+
+        <section class="content">
+            <div class="row leftmar">
+                <div class="col-lg-4 box border border-ligh shadow-lg p-3 mb-5 bg-body rounded">
+                    <h3>Leaves</h3>
+                    <p>Apply for Leave</p>
+                    <div class="mb-3">
+                        <label for="Leave Subject" class="form-label">Leave Subject</label>
+                        <input type="email" class="form-control" id="Leave Subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Leave Dates" class="form-label">Leave Dates</label>
+                        <input type="email" class="form-control" id="Leave Dates">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampletextarear" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampletextarear" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="leave type" class="form-label">Leave Type</label>
+                        <input type="email" class="form-control" id="leave type">
+                    </div>
+                    <button type="button" class="btn btn-secondary">Apply leave</button>
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">My Leaves</h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="myleaves_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+                                <div class="row box border border-ligh shadow-lg p-3 mb-5 bg-body rounded">
+                                    <div class="col-sm-4 ">
+                                        <table id="myleaves"
+                                            class="table table-bordered table-stripe dataTable no-footer" role="grid"
+                                            aria-describedby="myleaves_info" style="width: 1077px;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="dt-center sorting_asc" tabindex="0"
+                                                        aria-controls="myleaves" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="#: activate to sort column descending"
+                                                        style="width: 67px;">#</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myleaves"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="SUBJECT: activate to sort column ascending"
+                                                        style="width: 173px;">SUBJECT</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myleaves"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="DATES: activate to sort column ascending"
+                                                        style="width: 137px;">DATES</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myleaves"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="MESSAGE: activate to sort column ascending"
+                                                        style="width: 178px;">MESSAGE</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myleaves"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="TYPE: activate to sort column ascending"
+                                                        style="width: 119px;">TYPE</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myleaves"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="STATUS: activate to sort column ascending"
+                                                        style="width: 152px;">STATUS</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="odd">
+                                                    <td valign="top" colspan="6" class="dataTables_empty">No data
+                                                        available in table</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div id="myleaves_processing" class="dataTables_processing"
+                                            style="display: none;">Processing...</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-7 ">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="myleaves_paginate">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- ends the leaves content -->
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

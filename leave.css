@@ -1,0 +1,32 @@
+.leaves{
+    margin-top: 25px;
+    margin-left: 20%;
+    
+}
+.le{
+    font-size: 25px;
+    text-align: center;
+}
+.leftmar{
+    margin-left: 150px;
+}
+
+@media (min-width: 768px){}
+.col-sm-6 {
+    width: 50%;
+}
+.content{
+    margin-left:80px;
+}
+.on{
+    float: left;
+    margin-left: 58px;
+    font-size: small;
+    text-decoration: none;
+    text-align: none;
+    color: white;
+  margin-left: 100px;
+}
+
+
+
